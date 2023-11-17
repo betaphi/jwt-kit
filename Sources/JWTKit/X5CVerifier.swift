@@ -157,6 +157,9 @@ public class X5CVerifier {
                 name: headerAlg
             )
         )
+        
+        signer.jsonDecoder = jsonDecoder
+        
         return try signer.verify(parser: parser)
     }
 }
